@@ -1,0 +1,100 @@
+---
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{Astro.props.title}</title>
+	</head>
+	<body>
+        <slot/>
+	</body>
+</html>
+
+<style is:global>
+	*{	
+		padding: 0;
+		margin: 0;
+		line-height: 1.2rem;
+
+	}
+	body::-webkit-scrollbar{
+		display: none;
+	}
+
+	a {
+		font-family: elonnrml;
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+p{
+	font-family: elonnrml;
+}
+h1{
+	font-family: elonbold;
+	animation-name: slideUp;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+}
+h2{
+	font-family: elonnrml;
+	animation-name: slideUp;
+	animation-duration: 150ms;
+	animation-timing-function: ease-in;
+}
+h3{
+	font-family: elonnrml;
+}
+button > span {
+	
+	animation-name: slideUp;
+	animation-duration: 2s;
+	animation-timing-function: ease-in;
+}
+@keyframes slideUp {
+    0%,
+    50% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+     
+    60%,
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    
+    }
+  }
+@font-face{
+		font-family: "Elonnrml";
+		src: url("../ddin/D-DIN.otf");
+		}
+@font-face{
+	font-family: "Elonbold";
+		src: url("../ddin/D-DIN-Bold.otf");
+		
+}
+</style>

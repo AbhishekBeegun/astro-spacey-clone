@@ -1,0 +1,19 @@
+---
+import Details from "../components/Details";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import MainLayout from "../layouts/MainLayout.astro";
+
+---
+
+<MainLayout title="GPS3">
+    <Navbar client:load/>
+    <Details
+    background="https://sxcontent9668.azureedge.us/cms-assets/assets/MISSION_LAUNCH_desktop_46ec0834ce.jpg" 
+    link="https://www.youtube.com/watch?v=uLetihk5VNk" 
+    h2="JANUARY 18,2023" 
+    h1="GPS III SPACE VEHICLE 06 MISSION"
+    h3="On Wednesday, January 18 at 7:24 a.m. ET, SpaceX launched the GPS III Space Vehicle 06 mission from Space Launch Complex 40 (SLC-40) at Cape Canaveral Space Force Station in Florida."
+    p="This was the second launch and landing for this Falcon 9 first stage booster, which previously supported the launch of Crew-5."/>
+    <Footer/>
+</MainLayout>
