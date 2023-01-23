@@ -7,19 +7,19 @@ const Sec = ({h2,h1,btn,bcg,linkto}) => {
     <div style={{
       backgroundImage : `url(${background})`
     }}
-    className="h-screen bg-red-500 relative uppercase text-white bg-center bg-cover">
+    className="h-screen bg-black relative uppercase text-white bg-center bg-cover">
       <div className="absolute bottom-10 left-[50%] right-[50%]  text-6xl animate-bounce">
       {arrowdown}
       </div>
 
-      <div className="p-10 text-start absolute bottom-28 lg:left-32 flex flex-col items-start gap-10">
+      <div className="p-8 text-start absolute bottom-14 lg:left-32 flex flex-col items-start gap-6">
       <div>
       <h2 className="lg:text-lg ">{h2}</h2>
       <h1 className="text-3xl lg:text-6xl ">{h1}</h1>
       </div>
-      <a href={linkto} className="px-10 py-4 relative border-2 border-white group overflow-hidden  text-white inline-block">
+      <a href={linkto} className="px-14 py-4 relative border-2 border-white group overflow-hidden  text-white inline-block">
        <span className="absolute bottom-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-white group-hover:h-full opacity-90"></span>
-       <span className="relative group-hover:text-black uppercase">{btn}</span>
+       <span className="relative text-sm group-hover:text-black uppercase">{btn}</span>
       </a>
       </div>
       

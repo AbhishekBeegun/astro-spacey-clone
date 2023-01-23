@@ -9,17 +9,17 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>{Astro.props.title}</title>
 	</head>
-	<body>
+	<body class="bg-black">
         <slot/>
 	</body>
 </html>
 
 <style is:global>
+
 	*{	
 		padding: 0;
 		margin: 0;
 		line-height: 1.2rem;
-
 	}
 	body::-webkit-scrollbar{
 		display: none;
@@ -52,6 +52,9 @@ a:hover::after {
 
 p{
 	font-family: elonnrml;
+	animation-name: slideUp;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in;
 }
 h1{
 	font-family: elonbold;
@@ -67,13 +70,18 @@ h2{
 }
 h3{
 	font-family: elonnrml;
+	animation-name: slideUp;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
 }
-button > span {
-	
+a > span {	
+	font-family: elonnrml;
 	animation-name: slideUp;
 	animation-duration: 2s;
 	animation-timing-function: ease-in;
 }
+
+
 @keyframes slideUp {
     0%,
     50% {
@@ -98,3 +106,12 @@ button > span {
 		
 }
 </style>
+
+<script>
+	const loaderContainer = document.querySelector('.loader-container');
+	window.addEventListener('load', () => {
+		loaderContainer.parentElement.removeChild(loaderContainer);
+    // ...
+});
+
+</script>
